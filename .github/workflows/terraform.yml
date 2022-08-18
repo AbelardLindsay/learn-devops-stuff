@@ -51,7 +51,7 @@ on:
 permissions:
   contents: read
 env:
-  TEMP_PASSWORD: ${{ secrets.TEMP_PASSWORD}}
+  TF_VAR_TEMP_PASSWORD: ${{ secrets.TEMP_PASSWORD}}
 jobs:
   terraform:
     name: 'Terraform'
