@@ -77,7 +77,7 @@ resource "azurerm_linux_virtual_machine" "main" {
   location                        = azurerm_resource_group.main.location
   size                            = "Standard_F2"
   admin_username                  = "adminuser"
-  admin_password                  = TF_VAR_TEMP_PASSWORD
+  admin_password                  = var.TF_VAR_TEMP_PASSWORD
   disable_password_authentication = false
   network_interface_ids = [
     azurerm_network_interface.main.id,
