@@ -5,7 +5,7 @@ terraform {
     organization = "AbelardLindsay"
     # The name of the Terraform Cloud workspace to store Terraform state files in.
     workspaces {
-      name = "learning-devops-stuff"
+      name = "learn-devops-stuff"
     }
   }
   required_providers {
