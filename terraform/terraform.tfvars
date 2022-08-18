@@ -1,2 +1,2 @@
-prefix = "test-"
+prefix = "test"
 location = "westeurope"
