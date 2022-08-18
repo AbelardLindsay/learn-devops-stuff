@@ -4,6 +4,6 @@ variable "prefix" {
 variable "location"{
     type = string
 }
-variable "TF_VAR_TEMP_PASSWORD" {
+variable "TEMP_PASSWORD" {
     type = string
 }
