@@ -22,6 +22,6 @@ provider "azurerm" {
 }
 resource "azurerm_resource_group" "rg" {
   name     = "TestResourceGroup"
-  location = "eu-west"
+  location = "westeurope"
 }
 
