@@ -75,7 +75,7 @@ resource "azurerm_linux_virtual_machine" "main" {
   name                            = "${var.prefix}-vm"
   resource_group_name             = azurerm_resource_group.main.name
   location                        = azurerm_resource_group.main.location
-  size                            = "Standard_F2"
+  size                            = "Standard_B1ls"
   admin_username                  = "adminuser"
   admin_password                  = var.TEMP_PASSWORD
   disable_password_authentication = false
@@ -87,7 +87,7 @@ resource "azurerm_linux_virtual_machine" "main" {
   source_image_reference {
     publisher = "Canonical"
     offer     = "UbuntuServer"
-    sku       = "20.04-LTS"
+    sku       = "18.04-LTS"
     version   = "latest"
   }
 
