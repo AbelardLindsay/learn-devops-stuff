@@ -50,6 +50,8 @@ on:
   pull_request:
 permissions:
   contents: read
+env:
+  TEMP_PASSWORD: ${{ secrets.TEMP_PASSWORD}}
 jobs:
   terraform:
     name: 'Terraform'
