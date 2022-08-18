@@ -1,9 +1,9 @@
 variable "prefix" {
-    type = "string"
+    type = string
 }
 variable "location"{
-    type = "string"
+    type = string
 }
 variable "temp-password"{
-    type = "string"
+    type = string
 }
