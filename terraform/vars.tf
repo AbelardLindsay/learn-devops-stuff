@@ -4,6 +4,6 @@ variable "prefix" {
 variable "location"{
     type = string
 }
-variable "TEMP_PASSWORD" {
-    type = string
-}
+# variable "TEMP_PASSWORD" {
+#     type = string
+# }
