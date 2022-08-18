@@ -21,7 +21,7 @@ provider "azurerm" {
   features {}
 }
 resource "azurerm_resource_group" "rg" {
-  name     = "TestResourceGroup"
+  name     = "MyResourceGroup"
   location = "westeurope"
 }
 
