@@ -71,28 +71,28 @@ resource "azurerm_network_interface_security_group_association" "main" {
   network_security_group_id = azurerm_network_security_group.casual-server.id
 }
 
-# resource "azurerm_linux_virtual_machine" "main" {
-#   name                            = "${var.prefix}-vm"
-#   resource_group_name             = azurerm_resource_group.main.name
-#   location                        = azurerm_resource_group.main.location
-#   size                            = "Standard_B1ls"
-#   admin_username                  = "adminuser"
-#   admin_password                  = var.TEMP_PASSWORD
-#   disable_password_authentication = false
-#   network_interface_ids = [
-#     azurerm_network_interface.main.id,
-#     azurerm_network_interface.internal.id,
-#   ]
+resource "azurerm_linux_virtual_machine" "main" {
+  name                            = "${var.prefix}-vm"
+  resource_group_name             = azurerm_resource_group.main.name
+  location                        = azurerm_resource_group.main.location
+  size                            = "Standard_B1ls"
+  admin_username                  = "adminuser"
+  admin_password                  = var.TEMP_PASSWORD
+  disable_password_authentication = false
+  network_interface_ids = [
+    azurerm_network_interface.main.id,
+    azurerm_network_interface.internal.id,
+  ]
 
-#   source_image_reference {
-#     publisher = "Canonical"
-#     offer     = "UbuntuServer"
-#     sku       = "18.04-LTS"
-#     version   = "latest"
-#   }
+  source_image_reference {
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "18.04-LTS"
+    version   = "latest"
+  }
 
-#   os_disk {
-#     storage_account_type = "Standard_LRS"
-#     caching              = "ReadWrite"
-#   }
-# }
+  os_disk {
+    storage_account_type = "Standard_LRS"
+    caching              = "ReadWrite"
+  }
+}
