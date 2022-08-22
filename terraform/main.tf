@@ -96,6 +96,3 @@ resource "azurerm_linux_virtual_machine" "main" {
     caching              = "ReadWrite"
   }
 }
-output "ip" {
-  value = azurerm_linux_virtual_machine.main.azurerm_public_ip
-}
